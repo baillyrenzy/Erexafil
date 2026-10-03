@@ -1,0 +1,55 @@
+:root{--o:#F26B1D;--od:#C94F0A;--ol:#FFF1E7;--ink:#2B221B;--mut:#6B5E54;--line:#F1DFD2;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:90px;scroll-behavior:smooth}
+body{font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:var(--w);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Bricolage Grotesque','Figtree',sans-serif;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,4.2vw,3rem)}h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px}h3{font-size:1.25rem;margin-bottom:8px}
+p{margin-bottom:14px;max-width:68ch}
+a{color:var(--od)}
+header{position:sticky;top:0;z-index:10;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:2px solid var(--o)}
+.bar{max-width:1100px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;color:var(--o);text-decoration:none}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 14px;border-radius:8px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}
+nav a:hover,nav a.on{background:var(--ol);color:var(--od)}
+.btn{display:inline-block;background:var(--o);color:#fff;font-weight:700;padding:14px 28px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--od)}.btn.ghost{background:#fff;color:var(--od);border:2px solid var(--o)}
+.btn.sm{padding:9px 18px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+.page{display:none}.page.show{display:block}
+.nojs .page{display:block}
+section{padding:64px 0}
+.alt{background:var(--ol)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero p.lead{font-size:1.2rem;color:var(--mut)}
+.hero img,.split img{width:100%;height:auto;border-radius:18px}
+.hero .img-box{background:#000;border-radius:18px;overflow:hidden}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-left:5px solid var(--o);border-radius:12px;padding:22px}
+.alt .card{border-color:#fff;border-left-color:var(--o)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.pagehead{background:linear-gradient(180deg,var(--ol),#fff);padding:56px 0 30px}
+ul.tick{list-style:none;margin:10px 0 18px}
+ul.tick li{padding-left:30px;position:relative;margin-bottom:9px}
+ul.tick li:before{content:"✓";position:absolute;left:0;color:var(--o);font-weight:800}
+.day{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.day b{color:var(--od);font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem}
+details{border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px;background:#fff}
+summary{cursor:pointer;font-weight:700}details[open] summary{color:var(--od);margin-bottom:8px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;align-items:stretch}
+.plan{border:2px solid var(--line);border-radius:16px;padding:24px;text-align:center;background:#fff;display:flex;flex-direction:column;gap:6px}
+.plan.best{border-color:var(--o);box-shadow:0 10px 30px #f26b1d33}
+.plan .tag{background:var(--o);color:#fff;font-weight:700;border-radius:99px;padding:3px 14px;align-self:center;font-size:.9rem}
+.plan img{width:100%;border-radius:10px;background:#000;max-height:200px;object-fit:contain}
+.price{font-family:'Bricolage Grotesque',sans-serif;font-size:2.6rem;font-weight:800;color:var(--o)}
+.price small{font-size:1rem;color:var(--mut);font-weight:500}
+s{color:var(--mut)}
+.note{font-size:.9rem;color:var(--mut)}
+.band{background:var(--o);color:#fff;text-align:center;padding:52px 20px}
+.band p{margin:0 auto 20px}.band .btn{background:#fff;color:var(--od)}
+footer{background:#2B221B;color:#E8D9CD;padding:40px 0;font-size:.9rem}
+footer p{max-width:none}footer a{color:#FFB98A}
+@media(max-width:800px){.hero,.split{grid-template-columns:1fr}.day{grid-template-columns:1fr;gap:4px}section{padding:44px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
